@@ -1,3 +1,22 @@
 <p>
-  theme works!
+  Liste des thmes
 </p>
+<table class="table table-striped">
+<thead class="thead-inverse">
+<tr>
+	<th>#</th>
+	<th>Nom</th>
+	<th>Description</th>
+	<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+	<tr *ngFor="let theme of themes">
+		<td>{{theme.id}} </td>
+		<td>{{theme.name}}</td>
+		<td>{{theme.description}}</td>
+		<td></td>
+	</tr>
+</tbody>
+	
+</table>

@@ -1,6 +1,55 @@
+<div id="container">	
+<div class="row">
+
+	<div class="col-md-8">
+	
+
 <p>
   Liste des thmes
 </p>
+
+
+
+
+<div class="card">
+	<div class="card-header">
+		<span>Editer un theme</span>
+	</div>
+	<div class="card-block">
+<!-- 		<form role="form" > -->
+
+
+			<input type="text" hidden="hidden" class="hidden" />
+
+			<div class="form-group">
+
+				<label for="name" >Name</label> <input
+					type="text" class="form-control" id="name" [(ngModel)]="newTheme.name" />
+			</div>
+
+
+
+			<div class="form-group">
+				<label for="description">Description</label>
+				<textarea class="form-control" id="description" rows="3" [(ngModel)]="newTheme.description"
+					required="required"></textarea>
+			</div>
+
+
+
+
+
+
+
+			<button type="submit" class="btn btn-primary" (click)="createTheme(newTheme)">
+				Create
+			</button>
+
+<!-- 		</form> -->
+	</div>
+</div>
+
+
 <table class="table table-striped">
 <thead class="thead-inverse">
 <tr>
@@ -15,8 +64,16 @@
 		<td>{{theme.id}} </td>
 		<td>{{theme.name}}</td>
 		<td>{{theme.description}}</td>
-		<td></td>
+		<td>
+		<button (click)="deleteTheme(theme); $event.stopPropagation()">Delete</button>
+		</td>
 	</tr>
 </tbody>
 	
 </table>
+
+
+	</div>
+</div>
+
+</div>

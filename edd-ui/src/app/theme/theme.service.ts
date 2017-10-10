@@ -13,7 +13,7 @@ export class ThemeService {
   private headers = new Headers({ 'Content-Type' : 'application/json'});
 
   getThemes(): Promise<Theme[]> {
-    return this.http.get(this.themeUrl).toPromise().then(response => response.json() as Theme[]).catch(this.handleError);
+    return this.http.get(this.themeUrl + '/all').toPromise().then(response => response.json() as Theme[]).catch(this.handleError);
 
   }
 

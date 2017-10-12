@@ -1,0 +1,16 @@
+
+<label>Alert : </label>
+<!-- <input name="" class="form-control" (input)="onUpdateAlert($event)"> -->
+<input name="" class="form-control" [(ngModel)]="userAlert">
+<p class="text-success" *ngIf="showAlert; else noAlert">
+  success-alert works!
+</p>
+<ng-template #noAlert>
+<p [ngStyle]="{color:'red'}">No alert</p>
+</ng-template>
+<p>{{userAlert}}</p>
+<button [disabled]="!showButton" class="btn btn-primary" (click)="hideAlert()" >Hide</button>
+{{showButton}}
+
+<button [disabled]="userAlert == ''" class="btn btn-primary" (click)="showUserAlert()" >Shwo user alert</button>
+<p>{{showUserAlertMsg}}</p>

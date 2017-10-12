@@ -10,6 +10,8 @@ import { ThemeComponent } from './theme/theme.component';
 import { ThemeModule } from './theme/theme.module';
 import { ThemeService } from './theme/theme.service';
 import { Routes, RouterModule } from '@angular/router';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
 
 const routes: Routes = [
   { path: 'themes', component: ThemeComponent }
@@ -19,7 +21,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ThemeComponent
+    ThemeComponent,
+    WarningAlertComponent,
+    SuccessAlertComponent
     ],
   imports: [
     BrowserModule,
